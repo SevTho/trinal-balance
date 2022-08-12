@@ -1,24 +1,22 @@
-import { Text, View, SafeAreaView, StyleSheet, Platform } from 'react-native'
+import { Text, View } from 'react-native'
 import React from 'react'
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View className='flex h-full py-8 px-5 bg-sel-100'>
     
       { /* Titlebar */}
-      
+
       <View>
-        <Text>Test</Text>
+        <View>
+          <Text className='uppercase text-xl'>Guten Morgen Annika!</Text>
+          <Text>Du befindest dich heute in der</Text>
+          <Text>Lutealphase (15. Zyklustag)</Text>
+        </View>
       </View>
 
-    </SafeAreaView>
+    </View>
   )
-}
-
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: Platform.OS === 'android' ? 25:0
-  },
-});
+};
 
 export default HomeScreen
