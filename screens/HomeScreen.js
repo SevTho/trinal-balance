@@ -1,4 +1,4 @@
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import {SparklesIcon} from "react-native-heroicons/outline";
 
@@ -14,12 +14,14 @@ const HomeScreen = () => {
           <Text className='text-slate-800'>Du befindest dich heute in der</Text>
           <Text className='text-slate-800'>Lutealphase (15. Zyklustag)</Text>
         </View>
-        <Image 
-          source={{
-            uri: 'https://pps.whatsapp.net/v/t61.24694-24/294946175_727290145195026_6571170971301202090_n.jpg?ccb=11-4&oh=01_AVypQEqYUCfNYfdtM9S-Bd-McJEHFHZbnkZDzvAR-4UTjg&oe=6304CC1C',
-          }}
-          className='h-14 w-14 bg-gray-300 rounded-full mt-3'
-        />
+        <TouchableOpacity>
+          <Image 
+            source={{
+              uri: 'https://pps.whatsapp.net/v/t61.24694-24/294946175_727290145195026_6571170971301202090_n.jpg?ccb=11-4&oh=01_AVypQEqYUCfNYfdtM9S-Bd-McJEHFHZbnkZDzvAR-4UTjg&oe=6304CC1C',
+            }}
+            className='h-14 w-14 bg-gray-300 rounded-full mt-3'
+          />
+        </TouchableOpacity>
       </View>
 
       <View className='mt-10 space-y-8'>
@@ -36,7 +38,7 @@ const HomeScreen = () => {
             <Text className='text-sm text-gray-600'>Aufgrund deiner aktuellen Hormonlage</Text>
             <View className='flex-row'>
               <Text className='text-sm text-gray-600'>hast du viel Energie.</Text>
-              <Text className='text-sm font-bold ml-2 text-gray-600'>Probiere es hiermit!</Text>
+              <TouchableOpacity><Text className='text-sm font-bold ml-2 text-gray-600'>Probiere es hiermit!</Text></TouchableOpacity>
             </View>
           </View>
         </View>
@@ -51,7 +53,7 @@ const HomeScreen = () => {
           <View className='mt-3'>
             <Text className='text-sm text-gray-600'>Du solltest heute darauf achten,</Text>
             <Text className='text-sm text-gray-600'>dass du genügend blabla zu dir nimmst.</Text>
-            <Text className='text-sm font-bold text-gray-600'>Probiere doch mal dieses Rezept aus!</Text>
+            <TouchableOpacity><Text className='text-sm font-bold text-gray-600'>Probiere doch mal dieses Rezept aus!</Text></TouchableOpacity>
           </View>
         </View>
 
@@ -65,7 +67,7 @@ const HomeScreen = () => {
           <View className='mt-5'>
             <Text className='text-sm text-gray-600'>Du solltest heute darauf achten,</Text>
             <Text className='text-sm text-gray-600'>dass du genügend blabla zu dir nimmst.</Text>
-            <Text className='text-sm font-bold text-gray-600'>Probiere doch mal dieses Rezept aus!</Text>
+            <TouchableOpacity><Text className='text-sm font-bold text-gray-600'>Probiere doch mal dieses Rezept aus!</Text></TouchableOpacity>
           </View>
         </View>
 
