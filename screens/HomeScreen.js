@@ -1,8 +1,18 @@
 import { Text, View, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import {SparklesIcon} from "react-native-heroicons/outline";
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
+
+  const navigation = useNavigation();
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
+
   return (
     <View className='flex h-full flex-col py-8 px-7 bg-sel-100'>
     
