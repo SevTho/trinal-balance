@@ -24,7 +24,9 @@ const HomeScreen = () => {
           <Text className='text-slate-800'>Du befindest dich heute in der</Text>
           <Text className='text-slate-800'>Lutealphase (15. Zyklustag)</Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => {
+          navigation.navigate('User')
+        }}>
           <Image 
             source={{
               uri: 'https://pps.whatsapp.net/v/t61.24694-24/294946175_727290145195026_6571170971301202090_n.jpg?ccb=11-4&oh=01_AVypQEqYUCfNYfdtM9S-Bd-McJEHFHZbnkZDzvAR-4UTjg&oe=6304CC1C',
@@ -48,7 +50,11 @@ const HomeScreen = () => {
             <Text className='text-sm text-gray-600'>Aufgrund deiner aktuellen Hormonlage</Text>
             <View className='flex-row'>
               <Text className='text-sm text-gray-600'>hast du viel Energie.</Text>
-              <TouchableOpacity><Text className='text-sm font-bold ml-2 text-gray-600'>Probiere es hiermit!</Text></TouchableOpacity>
+              <TouchableOpacity onPress={() => {
+                navigation.navigate('DailyWorkout')
+              }}>
+                <Text className='text-sm font-bold ml-2 text-gray-600'>Probiere es hiermit!</Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -63,7 +69,10 @@ const HomeScreen = () => {
           <View className='mt-3'>
             <Text className='text-sm text-gray-600'>Du solltest heute darauf achten,</Text>
             <Text className='text-sm text-gray-600'>dass du genügend blabla zu dir nimmst.</Text>
-            <TouchableOpacity><Text className='text-sm font-bold text-gray-600'>Probiere doch mal dieses Rezept aus!</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => {
+                navigation.navigate('DailyFood')
+              }}><Text className='text-sm font-bold text-gray-600'>Probiere doch mal dieses Rezept aus!</Text>
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -77,7 +86,10 @@ const HomeScreen = () => {
           <View className='mt-5'>
             <Text className='text-sm text-gray-600'>Du solltest heute darauf achten,</Text>
             <Text className='text-sm text-gray-600'>dass du genügend blabla zu dir nimmst.</Text>
-            <TouchableOpacity><Text className='text-sm font-bold text-gray-600'>Probiere doch mal dieses Rezept aus!</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => {
+                navigation.navigate('DailyMindset')
+              }}><Text className='text-sm font-bold text-gray-600'>Probiere doch mal dieses Rezept aus!</Text>
+            </TouchableOpacity>
           </View>
         </View>
 
