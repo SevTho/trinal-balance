@@ -1,7 +1,12 @@
 import { Text, View, Image, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect } from 'react'
-import {SparklesIcon} from "react-native-heroicons/outline";
 import { useNavigation } from '@react-navigation/native';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faHeartPulse } from '@fortawesome/free-solid-svg-icons/faHeartPulse'
+import { faBowlFood } from '@fortawesome/free-solid-svg-icons/faBowlFood'
+import { faBrain } from '@fortawesome/free-solid-svg-icons/faBrain'
+
+
 
 const HomeScreen = () => {
 
@@ -43,7 +48,7 @@ const HomeScreen = () => {
           <View className='flex flex-row justify-between'>
             <View className='h-9 w-9 bg-sel-200 rounded-full'></View>
             <Text className='font-bold text-lg'>Sport</Text>
-            <SparklesIcon color="#dfcfb6" size={35} />
+            <FontAwesomeIcon icon={ faHeartPulse } color="#e4afa8" size={35} />
           </View>
           <View className='mt-3'>
             <Text className='text-sm text-gray-600'>Wie wäre es mit einem HIIT Training?</Text>
@@ -64,7 +69,7 @@ const HomeScreen = () => {
           <View className='flex flex-row justify-between'>
             <View className='h-9 w-9 bg-sel-300 rounded-full'></View>
             <Text className='font-bold text-lg'>Ernährung</Text>
-            <SparklesIcon color="#c7762e" size={35} />
+            <FontAwesomeIcon icon={ faBowlFood } color="#c7762e" size={35} />
           </View>
           <View className='mt-3'>
             <Text className='text-sm text-gray-600'>Du solltest heute darauf achten,</Text>
@@ -81,7 +86,7 @@ const HomeScreen = () => {
           <View className='flex flex-row justify-between'>
             <View className='h-9 w-9 bg-sel-400 rounded-full'></View>
             <Text className='font-bold text-lg'>Mindset</Text>
-            <SparklesIcon color="#567c68" size={35} />
+            <FontAwesomeIcon icon={ faBrain } color="#567c68" size={35} />
           </View>
           <View className='mt-5'>
             <Text className='text-sm text-gray-600'>Du solltest heute darauf achten,</Text>
